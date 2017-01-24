@@ -18,6 +18,8 @@ $(document).ready(function() {
 			lives--;
 		}
 
+		$(".lifeCounter").text("Lives: " + lives);
+
 		if (lives <= 0) {
 			// LOSE
 			Reset();
@@ -29,6 +31,7 @@ $(document).ready(function() {
 	function Reset() {
 		previousGueses = [];
 		lives = 5;
+		$(".lifeCounter").text("Lives: " + lives);
 		word = wordList[Math.floor(Math.random() * wordList.length)];
 		$("li h1").css("background-color", "white");
 		displayWord();
