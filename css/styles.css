@@ -8,13 +8,13 @@ li {
 	float: left;
 }
 
-li p1 {
+li h1 {
 	display: block;
 	text-align: center;
-	padding: 15px;
+	padding: 10px;
 }
 
-li p1:hover {
+li h1:hover {
 	background-color: cyan;
 }
 
@@ -24,4 +24,9 @@ div.wordContainer {
 	background-color: cyan;
 	text-align: center;
 	font-size: 48pt;
+}
+
+h1.lifeCounter {
+	padding-top: 50px;
+	float: left;
 }
