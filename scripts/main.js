@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var guessLetter = "";
 	var previousGueses = [];
-	var lives = 5;
+	var lives = 8;
 	var word = "test";
 	var wordList = ["programming", "northcoders", "pineapple", "function", "variable"];
 
@@ -22,10 +22,17 @@ $(document).ready(function() {
 
 		if (lives <= 0) {
 			// LOSE
+			alert("You Lose");
 			Reset();
 		}
 
 		displayWord();
+
+		if ($(".word").text() === word.split("").join(" ")) {
+			// WIN
+			alert("You Win");
+			Reset();
+		}
 	}
 
 	function Reset() {
